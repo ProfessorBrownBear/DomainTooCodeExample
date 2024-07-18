@@ -1,5 +1,6 @@
 Here's the TypeScript code and instructions to build and run the app, formatted for easy copying into Visual Studio Code:
-typescriptCopy// File: Building.ts
+
+// File: Building.ts
 export interface IBuilding {
   id: string;
   name: string;
@@ -89,14 +90,14 @@ app.listen(port, () => {
 Instructions to build and run the app:
 
 Set up the project:
-Copymkdir smart-campus-energy
+mkdir smart-campus-energy
 cd smart-campus-energy
 npm init -y
 npm install typescript @types/node express @types/express
 npm install --save-dev ts-node nodemon
 
 Create a tsconfig.json file:
-jsonCopy{
+Copy{
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
@@ -108,7 +109,7 @@ jsonCopy{
 
 Create the TypeScript files (Building.ts, EnergyManagementService.ts, and app.ts) with the content provided above.
 Run the application:
-Copynpx ts-node app.ts
+npx ts-node app.ts
 
 Test the API:
 
@@ -116,7 +117,7 @@ Add a building:
 Copycurl -X POST -H "Content-Type: application/json" -d '{"id":"1","name":"Science Building"}' http://localhost:3000/buildings
 
 Get all buildings:
-Copycurl http://localhost:3000/buildings
+curl http://localhost:3000/buildings
 
 Optimize energy for a building:
 Copycurl -X POST http://localhost:3000/optimize/1
@@ -124,4 +125,6 @@ Copycurl -X POST http://localhost:3000/optimize/1
 
 
 
-This setup provides a basic Express.js application with TypeScript, implementing the core functionality of the Smart Campus Energy Management System. You can extend this further by adding more features and components as needed.
+This setup provides a basic Express.js application with TypeScript, 
+  implementing the core functionality of the Smart Campus Energy Management System. 
+  You can extend this further by adding more features and components as needed.
